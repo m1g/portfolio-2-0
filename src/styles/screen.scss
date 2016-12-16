@@ -1,4 +1,9 @@
 @import 'utility';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/*******************
+GENERAL
+*******************/
 
 $base-text-size: 16px;
 $base-font-family: sans-serif;
@@ -9,6 +14,219 @@ html {
 
 body {
   @include font-smoothing(on);
+
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+  background-color: white;
+  color: #363636;
+}
+
+main {
+  margin: 0 auto;
+}
+
+h1,
+p {
+  margin: 12px 0;
+}
+
+/*******************
+HEADING
+*******************/
+
+header {
+  background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/space.jpg?raw=true');
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    padding-left: 100px;
+  }
+
+  h1 {
+    background-color: hsla(360, 100%, 100%, 0.8);
+    font-size: 1.25em;
+    border-radius: 5px;
+    height: 65%;
+    padding: 20px;
+    margin: -50px 0 0 50px;
+    position: relative;
+  }
+
+  //Code isn't working - need to add triangle to quote box
+
+  img::after {
+    content: '';
+    background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/tri.png?raw=true');
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    opacity: 0.8;
+  }
+}
+
+/*******************
+PORTFOLIO
+*******************/
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  padding-left: 0;
+  margin: 100px 0 0;
+  width: 100%;
+  overflow: visible;
+
+  img {
+    padding-left: 0;
+    width: 220px;
+    height: 200px;
+  }
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+  margin: 30px 15px;
+}
+
+/*******************
+BLOG POST
+*******************/
+
+article.blog-container {
+  position: relative;
+}
+
+article header.content {
+  border-radius: 5px;
+  background-color: white;
+  padding: 30px;
+  margin: 30px;
+}
+
+article header.top-background {
+  // background-image: url('images/react.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0.75em;
+  border-radius: 5px 5px 0 0;
+  margin: -30px;
+  height: 50px;
+}
+
+article header.bottom-background {
+  // background-image: url('images/code.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0.75em;
+  border-radius: 5px 5px 0 0;
+  margin: -30px;
+  height: 50px;
+}
+
+article h3 {
+  margin: 0;
+  padding-right: 10px;
+}
+
+article a:link {
+  text-decoration: none;
+}
+
+article time {
+  font-size: 0.9em;
+  color: #7e7e7e;
+}
+
+article header .title-stamp {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.keep-reading-btn {
+  background-color: #0075db;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 40px;
+  bottom: -15px;
+  border-radius: 5px;
+}
+
+/*******************
+FOOTER
+*******************/
+
+footer {
+  color: #ededed;
+  margin: 50px 50px 20px;
+}
+
+footer div.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+footer h1 {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+footer .social-icons a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.fa-twitter,
+.fa-3x {
+  display: block;
+  background: #0075db;
+  width: 0.9em;
+  height: 0.9em;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+footer div ul.social-icons {
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-top: 5px;
+  padding-bottom: 40px;
+}
+
+footer li {
+  list-style: none;
+  padding: 10px;
+}
+
+footer .copyright {
+  font-size: 0.75em;
 }
