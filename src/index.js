@@ -4,6 +4,7 @@ import { AppContainer } from 'react-hot-loader'
 import App from './components/App'
 
 import './styles/screen.scss'
+import data from '../data.json'
 
 const root = document.getElementById('root')
 
@@ -14,7 +15,7 @@ const render = (app) => {
   )
 }
 
-render(<App />)
+render(<App data={data} />)
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {

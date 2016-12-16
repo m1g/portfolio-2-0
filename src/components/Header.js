@@ -8,7 +8,7 @@ class Header extends Component {
         <header>
           <div>
             <img src='https://github.com/m1g/portfolio/blob/master/public/images/miguel.jpg?raw=true' />
-            <h1>Hi, my name is Miguel</h1>
+            <h1>Hi, my name is {this.props.name}</h1>
           </div>
           <div>
             <ul>

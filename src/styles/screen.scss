@@ -17,7 +17,7 @@ body {
 
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
-  background-color: white;
+  background-color: #00101a;
   color: #363636;
 }
 
@@ -69,13 +69,15 @@ header {
 
   //Code isn't working - need to add triangle to quote box
 
-  img::after {
-    content: '';
+  h1::after {
+    content: '  ';
     background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/tri.png?raw=true');
     height: 20px;
     width: 20px;
     position: absolute;
     opacity: 0.8;
+    bottom: -20px;
+    left: 20px;
   }
 }
 
@@ -111,58 +113,45 @@ li {
 BLOG POST
 *******************/
 
-article.blog-container {
-  position: relative;
-}
-
-article header.content {
-  border-radius: 5px;
-  background-color: white;
-  padding: 30px;
+article {
   margin: 30px;
-}
+  position: relative;
 
-article header.top-background {
-  // background-image: url('images/react.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 0.75em;
-  border-radius: 5px 5px 0 0;
-  margin: -30px;
-  height: 50px;
-}
+  div {
+    position: relative;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
 
-article header.bottom-background {
-  // background-image: url('images/code.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 0.75em;
-  border-radius: 5px 5px 0 0;
-  margin: -30px;
-  height: 50px;
-}
+  div.content {
+    padding: 20px;
 
-article h3 {
-  margin: 0;
-  padding-right: 10px;
-}
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid #ccc;
+      border-radius: 0;
 
-article a:link {
-  text-decoration: none;
-}
+      time {
+        padding-left: 10px;
+        color: #777;
+      }
+    }
+  }
 
-article time {
-  font-size: 0.9em;
-  color: #7e7e7e;
-}
+  header {
+    background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/react.png?raw=true');
+    border-radius: 5px 5px 0 0;
+  }
 
-article header .title-stamp {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  padding-top: 50px;
+  .blog-post {
+    background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/code.png?raw=true');
+  }
 }
 
 .keep-reading-btn {
@@ -182,18 +171,26 @@ FOOTER
 footer {
   color: #ededed;
   margin: 50px 50px 20px;
-}
 
-footer div.contact-me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-}
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
 
-footer h1 {
-  font-weight: normal;
-  font-size: 1.5em;
+  .copyright {
+    font-size: 0.75em;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 1.5em;
+  }
 }
 
 footer .social-icons a:link,
@@ -218,15 +215,7 @@ footer div ul.social-icons {
   display: flex;
   justify-content: center;
   padding-left: 0;
-  padding-top: 5px;
-  padding-bottom: 40px;
-}
-
-footer li {
-  list-style: none;
-  padding: 10px;
-}
-
-footer .copyright {
-  font-size: 0.75em;
+  padding-bottom: 45px;
+  margin-top: 10px;
+  background-color: #00101a;
 }
