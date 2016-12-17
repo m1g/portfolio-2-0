@@ -9,18 +9,38 @@ class App extends Component {
     super()
     this.state = {
       name: '',
-      location: ''
+      bio: '',
+      location: '',
+      avatar_url: '',
+      repos: []
     }
   }
 
   componentDidMount () {
-    const URL = 'https://api.github.com/users/m1g'
-    window.fetch(URL).then((response) => {
+    this.getProfile()
+  }
+
+  getProfile () {
+    window.fetch('https://api.github.com/users/m1g').then((response) => {
+      return response.json()
+    }).then((data) => {
+      this.getRepos(data.repos_url)
+      this.getRepos(data.updated_at)
+      this.setState({
+        name: data.name,
+        bio: data.bio,
+        location: data.location,
+        avatar_url: data.avatar_url
+      })
+    })
+  }
+
+  getRepos (url) {
+    window.fetch(url).then((response) => {
       return response.json()
     }).then((data) => {
       this.setState({
-        name: data.name,
-        location: data.location
+        repos: data
       })
     })
   }
@@ -30,8 +50,8 @@ class App extends Component {
     return (
       <div>
         {/* {data.name} */}
-        <Header name={this.state.name} />
-        <BlogHub />
+        <Header name={this.state.name} bio={this.state.bio} avatar_url={this.state.avatar_url} />
+        <BlogHub repos={this.state.repos.slice(0, 5)} />
         <Footer location={this.state.location} />
       </div>
     )

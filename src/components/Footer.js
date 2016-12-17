@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 
 class Footer extends Component {
 
+  static propTypes = {
+    location: React.PropTypes.string.isRequired
+  }
+
   render () {
     return (
       <footer>
@@ -9,7 +13,7 @@ class Footer extends Component {
           <h1>Stay connected with me.</h1>
           <ul className='social-icons'>
             <li><a href='http://twitter.com/miguelmalcolm'><i className='fa fa-twitter fa-3x' /></a></li>
-            <li><a href='http://twitter.com/miguelmalcolm'><i className='fa fa-twitter fa-3x' /></a></li>
+            <li><a href='http://github.com/m1g'><i className='fa fa-github fa-3x' /></a></li>
             <li><a href='http://twitter.com/miguelmalcolm'><i className='fa fa-twitter fa-3x' /></a></li>
             <li><a href='http://twitter.com/miguelmalcolm'><i className='fa fa-twitter fa-3x' /></a></li>
             <li><a href='http://twitter.com/miguelmalcolm'><i className='fa fa-twitter fa-3x' /></a></li>
