@@ -9,6 +9,7 @@ class Footer extends Component {
   render () {
     return (
       <footer>
+        <a name='contact' />
         <div className='contact-me'>
           <h1>Slide into my DMs.</h1>
           <ul className='social-icons'>

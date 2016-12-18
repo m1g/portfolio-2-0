@@ -11,13 +11,14 @@ class Header extends Component {
   render () {
     return (
       <div>
+        <a name='home' />
         <header>
           <nav>
-            <p>Miguel.</p>
+            <p><a href='#home'>Miguel.</a></p>
             <ul>
-              <li>Portfolio</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li><a href='#portfolio'>Portfolio</a></li>
+              <li><a href='#blog'>Blog</a></li>
+              <li><a href='#contact'>Contact</a></li>
             </ul>
           </nav>
           <div className='intro'>
@@ -28,6 +29,7 @@ class Header extends Component {
           </div>
         </header>
         <div className='portfolio'>
+          <a name='portfolio' />
           <ul>
             <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2.png?raw=true' /></li>
             <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2bg.png?raw=true' /></li>

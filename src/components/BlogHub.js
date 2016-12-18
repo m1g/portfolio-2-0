@@ -14,6 +14,7 @@ class BlogHub extends Component {
     return (
       <div>
         <article>
+          <a name='blog' />
           <div className='boxes'>
             <header />
             <div className='content'>
@@ -34,10 +35,7 @@ class BlogHub extends Component {
                 <time>updated December 26, 2016 at 12:00pm</time>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dicta vero repellat corrupti facere, dolor. Officiis cupiditate, harum
-                illo suscipit et eligendi similique, neque facere, repellendus tempore quae?
-                Fugiat, accusantium nostrum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ab ratione, pariatur provident labore hic amet aspernatur, nostrum impedit quia debitis nulla maxime ipsum, culpa veniam dolores qui! Itaque, atque.
               </p>
             </div>
             <a className='keep-reading-btn' href='#'>KEEP READING</a>
