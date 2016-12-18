@@ -17,7 +17,7 @@ body {
 
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
-  background-color: #00101a;
+  background-image: url('https://subtlepatterns.com/patterns/footer_lodyas.png');
   color: #363636;
 }
 
@@ -34,52 +34,73 @@ p {
 HEADING
 *******************/
 
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  z-index: 1;
+
+  p {
+    margin: 0 15px;
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 15px;
+  }
+}
+
+.fade {
+  background-image: url('http://i.imgur.com/Wi4uEKk.png');
+  background-repeat: repeat-x;
+  height: 60px;
+  margin-top: -60px;
+}
+
 header {
-  background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/space.jpg?raw=true');
+  background-image: url('https://subtlepatterns.com/patterns/crossword.png');
   display: flex;
   flex-direction: column;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 100px;
+  padding: 0 0 100px;
+  width: 100%;
 
   div.intro {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
   }
 
   img {
     width: 300px;
     height: 300px;
-    border-radius: 5px;
+    border-radius: 100%;
   }
 
   h1 {
-    background-color: hsla(360, 100%, 100%, 0.8);
-    font-size: 1.25em;
+    font-size: 1.5em;
     border-radius: 5px;
     height: 65%;
-    width: 30%;
+    width: 35%;
     padding: 20px;
-    margin: -280px 0 0 50px;
-    position: relative;
+    margin: 0 0 0 50px;
 
     p {
       font: $base-text-size / 1 $base-font-family;
     }
-  }
-
-  h1::after {
-    content: '  ';
-    background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/tri.png?raw=true');
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    opacity: 0.8;
-    bottom: -20px;
-    left: 20px;
   }
 }
 
@@ -87,28 +108,33 @@ header {
 PORTFOLIO
 *******************/
 
-ul {
+.portfolio ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: hsla(0, 0%, 0%, 0.6);
-  padding-left: 0;
-  margin: 100px 0 0;
+  background-color: #fff;
+  padding: 30px 0;
   width: 100%;
   overflow: visible;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
 
   img {
     padding-left: 0;
     width: 220px;
     height: 200px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #ccc;
   }
-}
 
-li {
-  list-style: none;
-  padding-left: 0;
-  margin: 30px 15px;
+  li {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px;
+  }
 }
 
 /*******************
@@ -116,78 +142,84 @@ BLOG POST
 *******************/
 
 article {
-  margin: 30px;
-  position: relative;
+  padding: 30px;
+  background-image: url('https://subtlepatterns.com/patterns/crossword.png');
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 
-  div {
-    position: relative;
+  .boxes {
     background-color: white;
-    margin-bottom: 30px;
     border-radius: 5px;
-  }
-
-  div.content {
-    padding: 20px;
-
-    a:link,
-    a:visited {
-      color: #363636;
-    }
+    width: 50%;
+    margin: 15px;
+    position: relative;
+    box-shadow: 3px 3px 5px grey;
 
     .keep-reading-btn {
-      background-color: #0075db;
+      font-size: 0.75em;
       padding: 10px;
       position: absolute;
-      right: 40px;
-      bottom: -15px;
+      right: 20px;
+      bottom: 0;
       border-radius: 5px;
 
       &:link,
       &:visited {
-        color: white;
-        text-decoration: none;
+        color: #777;
       }
     }
+  }
+
+  .content {
+    padding: 20px;
 
     ul {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      background-color: white;
-      margin-top: 5px;
-      color: #363636;
+      margin-top: 10px;
+      padding: 0;
+      list-style: none;
+
+      a:link,
+      a:visited {
+        color: #363636;
+      }
 
       li {
-        margin: 5px;
-        color: #777;
+        color: #bbb;
+        line-height: 1.5em;
       }
     }
+  }
 
-    div {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: flex-start;
-      padding: 0;
-      margin: 0;
-      border-bottom: 1px solid #ccc;
-      border-radius: 0;
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    line-height: 1.5em;
+  }
 
-      time {
-        padding-left: 10px;
-        color: #777;
-      }
-    }
+  h3 {
+    margin: 0;
+  }
+
+  time {
+    font-size: 0.8em;
+    color: #ccc;
   }
 
   header {
-    background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/react.png?raw=true');
+    width: auto;
+    background: #303030;
+    // background-image: url('https://subtlepatterns.com/patterns/debut_dark.png');
     border-radius: 5px 5px 0 0;
   }
 
-  .blog-post {
-    background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/code.png?raw=true');
-  }
+  // .blog-post {
+  //   background-image: url('https://github.com/m1g/portfolio/blob/master/public/images/code.png?raw=true');
+  // }
 }
 
 /*******************
@@ -195,8 +227,9 @@ FOOTER
 *******************/
 
 footer {
-  color: #ededed;
+  color: white;
   margin: 50px 50px 20px;
+  z-index: 1;
 
   .contact-me {
     display: flex;
@@ -219,20 +252,35 @@ footer {
   }
 }
 
+/*******************
+SOCIAL ICONS
+*******************/
+
 footer .social-icons a:link,
 a:visited {
   text-decoration: none;
   color: white;
 }
 
+footer div ul.social-icons {
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-bottom: 45px;
+  margin-top: 10px;
+}
+
 .fa-twitter,
 .fa-github,
+.fa-medium,
 .fa-3x {
   display: block;
   width: 0.9em;
   height: 0.9em;
   padding: 10px;
   border-radius: 50%;
+  margin: 5px;
   text-align: center;
 }
 
@@ -244,12 +292,11 @@ a:visited {
   background: #777;
 }
 
-footer div ul.social-icons {
-  font-size: 1em;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  padding-bottom: 45px;
-  margin-top: 10px;
-  background-color: #00101a;
+.fa-medium {
+  background: #00ab6b;
+}
+
+.fa-heart,
+.fa-1 {
+  color: red;
 }

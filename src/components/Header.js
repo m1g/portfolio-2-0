@@ -12,21 +12,29 @@ class Header extends Component {
     return (
       <div>
         <header>
+          <nav>
+            <p>Miguel.</p>
+            <ul>
+              <li>Portfolio</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
           <div className='intro'>
             <img src={this.props.avatar_url} />
             <h1>Hello, my name is {this.props.name}
               <p>{this.props.bio}</p>
             </h1>
           </div>
-          <div className='portfolio'>
-            <ul>
-              <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2.png?raw=true' /></li>
-              <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2bg.png?raw=true' /></li>
-              <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2-wall-walking.jpg?raw=true' /></li>
-              <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-pilot.jpg?raw=true' /></li>
-            </ul>
-          </div>
         </header>
+        <div className='portfolio'>
+          <ul>
+            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2.png?raw=true' /></li>
+            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2bg.png?raw=true' /></li>
+            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2-wall-walking.jpg?raw=true' /></li>
+            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-pilot.jpg?raw=true' /></li>
+          </ul>
+        </div>
       </div>
     )
   }
