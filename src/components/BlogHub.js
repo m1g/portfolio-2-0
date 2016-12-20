@@ -21,7 +21,7 @@ class BlogHub extends Component {
               <div className='title'>
                 <h3>What I'm Working On</h3>
                 { /* Import latest time via some logic */ }
-                <time>updated December 12, 2016 at 12:00am</time>
+                <time>{ this.props.repos.length > 0 ? `updated ${this.props.repos[0].updated_at}` : '' }</time>
               </div>
               <ul>{repos}</ul>
             </div>

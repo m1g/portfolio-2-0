@@ -61,7 +61,26 @@ nav {
 
   li {
     list-style: none;
-    margin: 15px;
+    padding: 15px;
+    transition: all 0.3s ease 0s;
+    color: #363636;
+
+    &:focus,
+    &:hover {
+      color: #fff;
+      background: #363636;
+
+      a:link,
+      a:visited {
+        color: #fff;
+      }
+    }
+
+    a:link,
+    a:visited {
+      color: #363636;
+      text-decoration: none;
+    }
   }
 }
 
@@ -79,10 +98,15 @@ header {
   padding: 0 0 50px;
   width: 100%;
 
-  a:link,
-  a:visited {
-    text-decoration: none;
-    color: #363636;
+  .logo {
+    :link,
+    :visited,
+    :focus,
+    :hover,
+    :active {
+      text-decoration: none;
+      color: #363636;
+    }
   }
 
   div.intro {

@@ -14,7 +14,7 @@ class Header extends Component {
         <a name='home' />
         <header>
           <nav>
-            <p><a href='#home'>Miguel.</a></p>
+            <p className='logo'><a href='#home'>Miguel.</a></p>
             <ul>
               <li><a href='#portfolio'>Portfolio</a></li>
               <li><a href='#blog'>Blog</a></li>

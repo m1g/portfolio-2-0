@@ -25,7 +25,6 @@ class App extends Component {
       return response.json()
     }).then((data) => {
       this.getRepos(data.repos_url)
-      this.getRepos(data.updated_at)
       this.setState({
         name: data.name,
         bio: data.bio,
@@ -51,7 +50,7 @@ class App extends Component {
       <div>
         {/* {data.name} */}
         <Header name={this.state.name} bio={this.state.bio} avatar_url={this.state.avatar_url} />
-        <BlogHub repos={this.state.repos.slice(0, 5)} />
+        <BlogHub repos={this.state.repos.sort((a, b) => a.updated_at > b.updated_at).slice(0, 5)} />
         <Footer location={this.state.location} />
       </div>
     )
