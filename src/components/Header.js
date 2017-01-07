@@ -31,10 +31,10 @@ class Header extends Component {
         <div className='portfolio'>
           <a name='portfolio' />
           <ul>
-            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2.png?raw=true' /></li>
-            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2bg.png?raw=true' /></li>
-            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-2-wall-walking.jpg?raw=true' /></li>
-            <li><img src='https://github.com/m1g/portfolio/blob/master/public/images/titanfall-pilot.jpg?raw=true' /></li>
+            <li><img src='http://i.imgur.com/yxQ1zxr.png' /></li>
+            <li><img src='http://i.imgur.com/JA8m4zI.png' /></li>
+            <li><img src='http://i.imgur.com/4HTyZFP.png' /></li>
+            <li><img src='http://i.imgur.com/YsllnwR.png' /></li>
           </ul>
         </div>
       </div>
