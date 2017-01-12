@@ -9,13 +9,13 @@ class Footer extends Component {
   render () {
     return (
       <footer>
-        <a name='contact' />
-        <div className='contact-me'>
+        <div id='contact' className='contact-me'>
           <h1>Slide into my DMs.</h1>
           <ul className='social-icons'>
             <li><a href='http://twitter.com/miguelmalcolm'><i className='fa fa-twitter fa-2x' /></a></li>
             <li><a href='http://github.com/m1g'><i className='fa fa-github fa-2x' /></a></li>
             <li><a href='https://medium.com/@miguelmalcolm/'><i className='fa fa-medium fa-2x' /></a></li>
+            <li><a href='https://linkedin.com/in/miguel-js'><i className='fa fa-linkedin fa-2x' /></a></li>
           </ul>
           <div className='copyright'>
             <p>

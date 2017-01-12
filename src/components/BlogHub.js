@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Time from './Time'
 
 class BlogHub extends Component {
 
@@ -8,20 +9,19 @@ class BlogHub extends Component {
 
   render () {
     const repos = this.props.repos.map((repo, i) => {
-      return <li key={i}><a href={repo.html_url}>{repo.name}</a>: {repo.updated_at}</li>
+      return <li key={i}><a href={repo.html_url}>{repo.name}</a>: <Time stamp={repo.pushed_at} /></li>
     })
 
     return (
-      <div>
+      <div id='blog'>
         <article>
-          <a name='blog' />
           <div className='boxes'>
             <header />
             <div className='content'>
               <div className='title'>
                 <h3>What I'm Working On</h3>
                 { /* Import latest time via some logic */ }
-                <time>{ this.props.repos.length > 0 ? `updated ${this.props.repos[0].updated_at}` : '' }</time>
+                { this.props.repos.length > 0 ? <Time stamp={this.props.repos[0].pushed_at} label='updated' /> : '' }
               </div>
               <ul>{repos}</ul>
             </div>

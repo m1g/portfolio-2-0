@@ -46,7 +46,7 @@ nav {
   border-bottom: 1px solid #e6e6e6;
   z-index: 1;
 
-  p {
+  .logo {
     font-family: 'Oleo Script', cursive;
     font-weight: 700;
     font-size: 2em;
@@ -69,10 +69,12 @@ nav {
     &:hover {
       color: #fff;
       background: #363636;
+      cursor: pointer;
 
       a:link,
       a:visited {
         color: #fff;
+        cursor: pointer;
       }
     }
 
@@ -80,6 +82,7 @@ nav {
     a:visited {
       color: #363636;
       text-decoration: none;
+      cursor: pointer;
     }
   }
 }
@@ -106,6 +109,7 @@ header {
     :active {
       text-decoration: none;
       color: #363636;
+      cursor: pointer;
     }
   }
 
@@ -220,6 +224,7 @@ article {
       a:link,
       a:visited {
         color: #363636;
+        cursor: pointer;
       }
 
       li {
@@ -312,6 +317,7 @@ footer div ul.social-icons {
 .fa-twitter,
 .fa-github,
 .fa-medium,
+.fa-linkedin,
 .fa-3x {
   display: block;
   width: 0.9em;
@@ -332,6 +338,10 @@ footer div ul.social-icons {
 
 .fa-medium {
   background: #00ab6b;
+}
+
+.fa-linkedin {
+  background: #4875b4;
 }
 
 .fa-heart,
