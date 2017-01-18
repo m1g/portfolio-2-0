@@ -38,7 +38,7 @@ class BlogHub extends Component {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ab ratione, pariatur provident labore hic amet aspernatur, nostrum impedit quia debitis nulla maxime ipsum, culpa veniam dolores qui! Itaque, atque.
               </p>
             </div>
-            <a className='keep-reading-btn' href='#'>KEEP READING</a>
+            <a className='keep-reading-btn' href='https://medium.com/@miguelmalcolm/'>KEEP READING</a>
           </div>
         </article>
       </div>
