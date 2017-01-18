@@ -32,13 +32,13 @@ class BlogHub extends Component {
             <div className='content'>
               <div className='title'>
                 <h3>Blog Posts</h3>
-                <time>updated December 26, 2016 at 12:00pm</time>
+                <time>updated December 20, 2016 at 12:00pm</time>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ab ratione, pariatur provident labore hic amet aspernatur, nostrum impedit quia debitis nulla maxime ipsum, culpa veniam dolores qui! Itaque, atque.
+                <h3>The Halfway Mark in Learning Javascript</h3> 6 weeks in and this Immersive Front End course is delivering in full, pushing me to the limit, and challenging how much I can learn and put into practice within these few months...
               </p>
             </div>
-            <a className='keep-reading-btn' href='https://medium.com/@miguelmalcolm/'>KEEP READING</a>
+            <a className='keep-reading-btn' href='https://medium.com/@miguelmalcolm/the-halfway-mark-in-learning-javascript-27f331deec53#.j0lfljh0e'>KEEP READING</a>
           </div>
         </article>
       </div>
